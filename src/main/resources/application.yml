@@ -1,2 +1,15 @@
 server:
   port: 8081
+
+person:
+  name: Eric
+  age: 31
+  boss: true
+  birth: 1988/02/26
+  maps: {k1: v1, k2: 22}
+  lists:
+    - bo
+    - wang
+  dog:
+    name: mame
+    age: 2
