@@ -1,0 +1,15 @@
+person:
+  #松散绑定，Person类中属性为firstName和lastName，此处first-name和last_name都可以正常绑定
+  #只有@ConfigurationProperties支持，@Value()不支持
+  first-name: Eric
+  last_name: Ren
+  age: 31
+  boss: true
+  birth: 1988/02/26
+  maps: {k1: v1, k2: 22}
+  lists:
+    - bo
+    - wang
+  dog:
+    name: mame
+    age: 2

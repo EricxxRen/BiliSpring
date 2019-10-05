@@ -1,6 +1,7 @@
 package com.rxx.coffeejourney.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -16,9 +17,20 @@ import java.util.Map;
  * 需要添加@Component注解
  */
 @Component
+/**
+ * @Validated加入数据校验功能，属性上加@Email标签说明该属性必须为邮箱格式
+ * 只有@ConfigurationProperties支持，@Value()不支持
+ */
+//@Validated
+/**
+ * @PropertySource(value = "classpath:person.properties")只能作用于.properties文件
+ * 获取不到.yml文件
+ */
+@PropertySource(value = "classpath:person.properties")
 @ConfigurationProperties(prefix = "person")
 public class Person {
-    private String name;
+    private String firstName;
+    private String lastName;
     private Integer age;
     private Boolean boss;
     private Date birth;
@@ -27,25 +39,20 @@ public class Person {
     private List<Object> lists;
     private Dog dog;
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", boss=" + boss +
-                ", birth=" + birth +
-                ", maps=" + maps +
-                ", lists=" + lists +
-                ", dog=" + dog +
-                '}';
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getName() {
-        return name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Integer getAge() {
@@ -94,5 +101,19 @@ public class Person {
 
     public void setDog(Dog dog) {
         this.dog = dog;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", boss=" + boss +
+                ", birth=" + birth +
+                ", maps=" + maps +
+                ", lists=" + lists +
+                ", dog=" + dog +
+                '}';
     }
 }
