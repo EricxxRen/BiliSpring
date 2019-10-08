@@ -1,11 +1,14 @@
 server:
   port: 8081
-  servlet:
-    context-path: /coffeejouney
 
 spring:
   profiles:
     active: dev
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
 
 person:
   #松散绑定，Person类中属性为firstName和lastName，此处first-name和last_name都可以正常绑定
@@ -22,6 +25,7 @@ person:
   dog:
     name: mame
     age: 2
+
 
 #---
 #spring:

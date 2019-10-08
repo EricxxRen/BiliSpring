@@ -1,2 +1,4 @@
+
 server:
-    port:
+    port: 8082
+debug: true
