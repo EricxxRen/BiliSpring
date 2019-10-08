@@ -26,7 +26,7 @@ import java.util.Map;
  * @PropertySource(value = "classpath:person.properties")只能作用于.properties文件
  * 获取不到.yml文件
  */
-@PropertySource(value = "classpath:person.properties")
+//@PropertySource(value = "classpath:person.properties")
 @ConfigurationProperties(prefix = "person")
 public class Person {
     private String firstName;
