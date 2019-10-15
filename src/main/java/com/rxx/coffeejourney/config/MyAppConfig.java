@@ -1,6 +1,7 @@
 package com.rxx.coffeejourney.config;
 
 import com.rxx.coffeejourney.service.HelloService;
+import com.rxx.coffeejourney.service.SuccessService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,5 +18,10 @@ public class MyAppConfig {
     public HelloService helloService () {
         System.out.println("配置类@Bean给容器中添加helloService组件");
         return new HelloService();
+    }
+
+    @Bean
+    public SuccessService successService () {
+        return new SuccessService();
     }
 }

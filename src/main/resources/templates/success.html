@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Success!!!</title>
+</head>
+<body>
+    <h1>成功！！！</h1>
+<!--    &lt;!&ndash;将div中的文本内容设置为${hello}&ndash;&gt;-->
+    <h2>${hello}使用th:text(不进行转义):</h2>
+    <div th:text="${Hello}"></div>
+
+    <h2>${hello}使用th:utext(进行转义):</h2>
+    <div th:utext="${Hello}"></div>
+
+    <!--th:each每次回生成4个h4标签-->
+    <h2>使用th:each遍历数组</h2>
+    <h4 th:text="${user}" th:each="user:${users}"></h4>
+
+    <!--th:each每次回生成4个h4标签-->
+    <h2>使用th:each遍历数组</h2>
+    <h4>
+        <!--使用inline写法-->
+        <span th:each="user:${users}">[[${user}]]</span>
+    </h4>
+
+</body>
+</html>
