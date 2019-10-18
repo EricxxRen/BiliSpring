@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Controller
  *
  * @RestController包含了@ResponseBody和@Controller
+ * 当使用Restful API是采用@RestController
+ * 需要使用静态页面时只需要@Controller标签
  */
 @RestController
 public class HelloWorld {
