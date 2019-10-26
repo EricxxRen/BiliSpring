@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.rxx</groupId>
-    <artifactId>coffeejourney</artifactId>
+    <artifactId>BiliSpring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>coffeejourney</name>
-    <description>CoffeeJourney Web Application</description>
+    <description>Bilibili SpringBoot course practise</description>
 
     <properties>
         <java.version>1.8</java.version>
